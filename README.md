@@ -22,3 +22,6 @@ $ make ml_hw
 ```
 $ make dram_data
 ```
+
+note:
+pip install pandas
