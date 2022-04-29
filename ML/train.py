@@ -183,9 +183,9 @@ def main():
     random.seed(0)
     np.random.seed(0)
 
-    batch_size = 64
+    batch_size = 16
     num_out = 5
-    num_epoch = 50
+    num_epoch = 15
 
     train_set = ECGDataset('dataset/trainset')
     print(train_set[0][0])
@@ -194,8 +194,8 @@ def main():
     print(val_set[0][0])
     print(val_set[0][0].shape)
 
-    train_loader = DataLoader(train_set, batch_size=16, shuffle=True, num_workers=48, pin_memory=True)
-    val_loader = DataLoader(val_set, batch_size=16, shuffle=False, num_workers=48, pin_memory=True)
+    train_loader = DataLoader(train_set, batch_size=batch_size, shuffle=True, num_workers=48, pin_memory=True)
+    val_loader = DataLoader(val_set, batch_size=batch_size, shuffle=False, num_workers=48, pin_memory=True)
 
     model = ECGModel()
     print(model.parameters)
