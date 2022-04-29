@@ -18,6 +18,7 @@ convert_weights: src/convert_weights.cpp
 convert_input: src/convert_input.cpp
 	rm -f convert_input
 	g++ -o convert_input src/convert_input.cpp $(OPT)
+	mkdir -p data/input
 	./convert_input
 	mkdir -p data/input/dataset_list
 	cp ../ML/dataset/*_list.txt data/input/dataset_list
