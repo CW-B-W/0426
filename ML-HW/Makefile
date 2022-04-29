@@ -11,6 +11,7 @@ OPT = -Wall --std=c++14 $(DEFINE_FIXED) $(INC)
 convert_weights: src/convert_weights.cpp
 	rm -f convert_weights
 	g++ -o convert_weights src/convert_weights.cpp $(OPT)
+	mkdir -p data/weights
 	./convert_weights
 
 .PHONY: convert_input
