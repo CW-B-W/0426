@@ -31,6 +31,17 @@ ml: src/ml.cpp
 
 .PHONY: run_ml
 run_ml: ml
+	mkdir -p result/logs
+	mkdir -p result/input
+	mkdir -p result/conv1d_0_golden
+	mkdir -p result/relu_0_golden
+	mkdir -p result/maxpool1d_0_golden
+	mkdir -p result/conv1d_1_golden
+	mkdir -p result/relu_1_golden
+	mkdir -p result/maxpool1d_1_golden
+	mkdir -p result/flatten_golden
+	mkdir -p result/fc_0_golden
+	mkdir -p result/output
 	./ml
 
 .PHONY: gencode
